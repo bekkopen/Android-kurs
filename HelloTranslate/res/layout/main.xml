@@ -13,6 +13,7 @@
 		android:id="@+id/translatebutton" android:layout_height="wrap_content"></Button>
 
 	<ScrollView
+		android:id="@+id/translateScrollview"
 		android:layout_height="fill_parent" android:layout_width="fill_parent">>
 		<TableLayout android:id="@+id/translateTableLayout"
 			android:layout_height="fill_parent" android:layout_width="wrap_content">

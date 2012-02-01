@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.util.Arrays;
 
 import org.apache.http.HttpResponse;
@@ -12,17 +13,15 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 public class FetchTranslateAsyncTask extends AsyncTask<String, String, String> {
 	private final static String MICROSOFT_API_KEY = "CE992C875E291DA55801C3B7E3FAF1125A7829B8";
 	AsyncTaskDelegate<String> delegate;
-	private String[] languages = {"en","sv", "ar", "bg", "ca", "cs", "da", "nl", 
-			"et", "fi", "fr", "de", "el", "ht", "he", "hi", "hu", "id", "it",
-			"ja", "ko", "lv", "lt", "pl", "pt", "ro", "ru", "sk", "sl", "es",
-			 "th", "tr", "uk", "vi" };
+	private String[] languages = { "en", "sv", "ar", "bg", "ca", "cs", "da",
+			"nl", "et", "fi", "fr", "de", "el", "ht", "he", "hi", "hu", "id",
+			"it", "ja", "ko", "lv", "lt", "pl", "pt", "ro", "ru", "sk", "sl",
+			"es", "th", "tr", "uk", "vi" };
 
-	
 	public FetchTranslateAsyncTask(AsyncTaskDelegate<String> delegate) {
 		this.delegate = delegate;
 	}
@@ -32,8 +31,9 @@ public class FetchTranslateAsyncTask extends AsyncTask<String, String, String> {
 		Arrays.sort(languages);
 		try {
 			for (String language : languages) {
-				String translatedText = getTranslationForLanguage(norwegianWord[0], language);
-				publishProgress(language+"  "+translatedText);
+				String translatedText = getTranslationForLanguage(
+						norwegianWord[0], language);
+				publishProgress(language + "  " + translatedText);
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -52,10 +52,11 @@ public class FetchTranslateAsyncTask extends AsyncTask<String, String, String> {
 	 */
 	private String getTranslationForLanguage(String norwegianWord,
 			String language) {
+
+		norwegianWord = URLEncoder.encode(norwegianWord);
 		String url = String
 				.format("http://api.microsofttranslator.com/v2/Http.svc/Translate?appId=%s&text=%s&from=no&to=%s",
 						MICROSOFT_API_KEY, norwegianWord, language);
-		Log.w("", "Fetching some from url " + url);
 		BufferedReader in = null;
 		String responseText = null;
 		try {
@@ -87,7 +88,6 @@ public class FetchTranslateAsyncTask extends AsyncTask<String, String, String> {
 
 	@Override
 	protected void onProgressUpdate(String... items) {
-		Log.w(this.getClass().getCanonicalName(), items[0]);
 		delegate.publishItem(items[0]);
 	}
 
