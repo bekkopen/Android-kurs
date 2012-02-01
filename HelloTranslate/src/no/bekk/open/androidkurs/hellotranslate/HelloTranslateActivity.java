@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
@@ -30,6 +31,7 @@ public class HelloTranslateActivity extends Activity implements AsyncTaskDelegat
 
 					@Override
 					public void onClick(View v) {
+						tableLayout.removeAllViews();
 						FetchTranslateAsyncTask task = new FetchTranslateAsyncTask(HelloTranslateActivity.this);
 						EditText editField = (EditText) findViewById(R.id.translateText);
 						task.execute(editField.getText().toString());
@@ -42,6 +44,7 @@ public class HelloTranslateActivity extends Activity implements AsyncTaskDelegat
 	public void publishItem(String string) {
 		TextView textView = new TextView(this);
 		TableRow row = new TableRow(this);
+		row.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
 		textView.setText(string);
 		row.addView(textView);
 		tableLayout.addView(row);
