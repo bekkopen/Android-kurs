@@ -10,14 +10,6 @@
 		<requestFocus></requestFocus>
 	</EditText>
 	<Button android:text="Translate this.." android:layout_width="fill_parent"
-		android:id="@+id/translatebutton" android:layout_height="wrap_content"></Button>
+		android:id="@+id/translatebutton" android:layout_height="wrap_content" />
 
-	<ScrollView
-		android:id="@+id/translateScrollview"
-		android:layout_height="fill_parent" android:layout_width="fill_parent">>
-		<TableLayout android:id="@+id/translateTableLayout"
-			android:layout_height="fill_parent" android:layout_width="wrap_content">
-
-		</TableLayout>
-	</ScrollView>
 </LinearLayout>
