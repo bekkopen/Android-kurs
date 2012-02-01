@@ -5,8 +5,17 @@
     android:layout_height="fill_parent"
     >
 <TextView  
+    android:id="@+id/translatedText"
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
     android:text="@string/hello"
     />
+    
+    <Button 
+    	android:id="@+id/translatebutton"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:text="Translate this.."
+    />
+    
 </LinearLayout>
