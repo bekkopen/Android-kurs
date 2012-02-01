@@ -5,6 +5,7 @@ import no.bekk.open.androidkurs.hellotranslate.service.FetchTranslateAsyncTask;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class TranslatedWordsListActivity extends ListActivity implements AsyncTaskDelegate<String> {
@@ -25,6 +26,8 @@ public class TranslatedWordsListActivity extends ListActivity implements AsyncTa
 		
 		translatedWordsListAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1);
 		setListAdapter(translatedWordsListAdapter);
+
+		getListView().setTranscriptMode(ListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
 	}
 	
 	
@@ -34,7 +37,7 @@ public class TranslatedWordsListActivity extends ListActivity implements AsyncTa
 
 	@Override
 	public void publishItem(String string) {
-		translatedWordsListAdapter.add(string);
+		translatedWordsListAdapter.add(string);		
 	}
 
 	@Override
