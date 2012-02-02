@@ -1,9 +1,12 @@
 package no.bekk.open.flightdata.android.service;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLConnection;
 
 import no.bekk.open.flightdata.android.domain.Flight;
 
@@ -49,11 +52,9 @@ public class GetFlightsDataTask extends AsyncTask<String, Flight, Void>{
 	}
 	
 	private InputStreamReader getInputStreamReaderFromUrl(String url) throws IOException, URISyntaxException {
-		HttpClient client = new DefaultHttpClient();
-		HttpGet request = new HttpGet();
-		request.setURI(new URI(url));
-		HttpResponse response = client.execute(request);
-		return new InputStreamReader(response.getEntity().getContent());
+		URL oracle = new URL(url);
+		URLConnection yc = oracle.openConnection();
+		return new InputStreamReader(yc.getInputStream());
 	}
 	
 	private void readFlightArray(JsonReader reader) throws IOException{
