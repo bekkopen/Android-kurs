@@ -1,10 +1,11 @@
 package no.bekk.open.flightdata.android.fragment;
 
-import android.app.ActionBar.Tab;
 import android.app.ActionBar;
+import android.app.ActionBar.Tab;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.os.Bundle;
 
 public class TabListener<T extends Fragment> implements ActionBar.TabListener {
     private Fragment mFragment;
@@ -29,7 +30,9 @@ public class TabListener<T extends Fragment> implements ActionBar.TabListener {
         // Check if the fragment is already initialized
         if (mFragment == null) {
             // If not, instantiate and add it to the activity
-            mFragment = Fragment.instantiate(mActivity, mClass.getName());
+            Bundle bundle = new Bundle();
+            bundle.putString("type", mTag);
+        	mFragment = Fragment.instantiate(mActivity, mClass.getName(), bundle);
             ft.add(android.R.id.content, mFragment, mTag);
         } else {
             // If it exists, simply attach it in order to show it

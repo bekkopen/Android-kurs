@@ -15,25 +15,27 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-public class DepartureFragment extends Fragment implements AsyncTaskDelegate<Flight>{
-	
-	private TableLayout departureTable;
-	private GetFlightsDataTask getFlights;
+public class FlightListFragment extends Fragment implements AsyncTaskDelegate<Flight>{
 
+	private TableLayout flightTable;
+	private GetFlightsDataTask getFlights;
+	private String type;
+	
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.departure_fragment, container, false);
-		departureTable = (TableLayout) view.findViewById(R.id.departure_table);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle bundle) {
+		View view = inflater.inflate(R.layout.arrival_fragment, container, false);
+		flightTable = (TableLayout)view.findViewById(R.id.arrival_table);
+		
 		return view;
 	}
 	
 	@Override
 	public void onStart() {
 		super.onStart();
+		this.type = getArguments().getString("type");
 		getFlights = new GetFlightsDataTask(this);
 		String iata = ((FlightDataActivity)getActivity()).getCurrentAirportIata();
-		getFlights.execute(iata, "D");
+		getFlights.execute(iata, type);
 	}
 	
 	@Override
@@ -51,7 +53,7 @@ public class DepartureFragment extends Fragment implements AsyncTaskDelegate<Fli
 		TextView dateTime = (TextView)tableRow.findViewById(R.id.flight_row_date_time);
 		city.setText(flight.getCity());
 		dateTime.setText(flight.getDateTime());
-		departureTable.addView(tableRow);
+		flightTable.addView(tableRow);
 	}
 
 	@Override

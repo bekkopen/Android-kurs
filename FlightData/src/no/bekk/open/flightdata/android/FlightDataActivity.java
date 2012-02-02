@@ -1,7 +1,6 @@
 package no.bekk.open.flightdata.android;
 
-import no.bekk.open.flightdata.android.fragment.ArrivalFragment;
-import no.bekk.open.flightdata.android.fragment.DepartureFragment;
+import no.bekk.open.flightdata.android.fragment.FlightListFragment;
 import no.bekk.open.flightdata.android.fragment.TabListener;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
@@ -18,7 +17,6 @@ public class FlightDataActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.main);
         
         currentAirportName = getIntent().getExtras().getString(SELECTED_AIRPORT_NAME);
         currentAirportIata = getIntent().getExtras().getString(SELECTED_AIRPORT_IATA);
@@ -34,12 +32,12 @@ public class FlightDataActivity extends Activity {
     private void addActionBarTabs(ActionBar actionBar) {
     	Tab tab = actionBar.newTab()
         		.setText("Arrivaal")
-        		.setTabListener(new TabListener<ArrivalFragment>(this, "arrival", ArrivalFragment.class));
+        		.setTabListener(new TabListener<FlightListFragment>(this, "A", FlightListFragment.class));
         actionBar.addTab(tab);
         
         tab = actionBar.newTab()
         		.setText("Departure")
-        		.setTabListener(new TabListener<DepartureFragment>(this, "departure", DepartureFragment.class));
+        		.setTabListener(new TabListener<FlightListFragment>(this, "D", FlightListFragment.class));
         actionBar.addTab(tab);
     }
     
