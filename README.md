@@ -15,4 +15,7 @@ Requirement
 
 Usage
 ----
-Todoo
+* Checkout with git: http://code.google.com/p/msysgit/downloads/detail?name=Git-1.7.9-preview20120201.exe&can=3&q=
+ * If you need proxy: set https_proxy="http://IP-adr:port"
+ * For å clone repo: git clone "https://github.com/bekkopen/Android-kurs"
+ * For å switche til en annen branch: git checkout "branch_name" 
