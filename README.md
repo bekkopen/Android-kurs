@@ -5,16 +5,18 @@ Instructions
 ----
 * 1. Eclipse
 	- Eclipse Classic: http://www.eclipse.org/downloads/
- 	- Rember to set eclipse-proxy settings if behind proxy (eclipse preferences, search for proxy)
+ 	- Husk evt proxy-settings hvis nødvendig: eclipse-proxy (eclipse preferences, søt etter proxy)
 * 2. Android SDK
 	- http://developer.android.com/sdk/index.html
+	- Start SDK manager, huk av for Android SDK Tools, Android SDK Plattform-tools og Android 4.0.3 (API15) og velg "Install packages". MERK Proxy-settings hvis nødvendig: SDK-manager, tools-options
 * 3. Android Development Toolkit
 	- Eclipse: Install new software -> add "https://dl-ssl.google.com/android/eclipse/"
-	- Use android API-15 for Android 4.0
 * 4. Git:  http://code.google.com/p/msysgit/downloads/detail?name=Git-1.7.9-preview20120201.exe&can=3&q=
- * Set proxy if needed, Windows set https_proxy=http://ip:port or unix export https_proxy=http://ip:port
- * Try to clone from "https://github.com/bekkopen/Android-kurs" with - git clone "https://github.com/bekkopen/Android-kurs"
+ * Proxy hvis nødvendig, Windows set https_proxy=http://ip:port eller unix export https_proxy=http://ip:port
+ * Prøv å klone fra "https://github.com/bekkopen/Android-kurs": git clone "https://github.com/bekkopen/Android-kurs"
 
 Troubleshooting
 ----
-* Ensure Java compiler is set to 1.6. Right click project -> Properties -> Java Compiler -> Compiler compliance level -> 1.6
+* Får ikke kompilert koden pga bruk av @Override av metoder fra Interfaces
+	- Påse at eclipse benytter Java1.6 til kompilering: høyreklikk project -> Properties -> Java Compiler -> Compiler compliance level -> 1.6
+
