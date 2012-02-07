@@ -15,3 +15,6 @@ Instructions
  * Set proxy if needed, Windows set https_proxy=http://ip:port or unix export https_proxy=http://ip:port
  * Try to clone from "https://github.com/bekkopen/Android-kurs" with - git clone "https://github.com/bekkopen/Android-kurs"
 
+Troubleshooting
+----
+* Ensure Java compiler is set to 1.6 to user @Override. Right click project -> Properties -> Java Compiler -> Compiler compliance level -> 1.6
