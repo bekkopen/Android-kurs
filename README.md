@@ -17,4 +17,4 @@ Instructions
 
 Troubleshooting
 ----
-* Ensure Java compiler is set to 1.6 to user @Override. Right click project -> Properties -> Java Compiler -> Compiler compliance level -> 1.6
+* Ensure Java compiler is set to 1.6. Right click project -> Properties -> Java Compiler -> Compiler compliance level -> 1.6
