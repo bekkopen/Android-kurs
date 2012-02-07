@@ -5,6 +5,7 @@ Instructions
 ----
 * 1. Eclipse
 	- Eclipse Classic: http://www.eclipse.org/downloads/
+ 	- Rember to set eclipse-proxy settings if behind proxy (eclipse preferences, search for proxy)
 * 2. Android SDK
 	- http://developer.android.com/sdk/index.html
 * 3. Android Development Toolkit
