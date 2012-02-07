@@ -19,4 +19,4 @@ Troubleshooting
 ----
 * Får ikke kompilert koden pga bruk av @Override av metoder fra Interfaces
 	- Påse at eclipse benytter Java1.6 til kompilering: høyreklikk project -> Properties -> Java Compiler -> Compiler compliance level -> 1.6
-
+* Feilmelding når man laster ned API-15 ved skriving til c:\program... i windows, prøv å kjør som Administrator i windows7 
