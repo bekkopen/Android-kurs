@@ -11,7 +11,7 @@ Instruksjoner
 	- http://developer.android.com/sdk/index.html
 	- Start SDK manager, huk av for Android SDK Tools, Android SDK Plattform-tools og Android 4.0.3 (API15) og velg "Install packages". MERK Proxy-settings hvis nødvendig: SDK-manager, tools-options
 * 3. Android Development Toolkit
-	- Eclipse: Install new software -> add "https://dl-ssl.google.com/android/eclipse/", velg alt under "Developer Tools", denne kan ta litt tid så vær tolmodig :)
+	- Eclipse: Install new software -> add "https://dl-ssl.google.com/android/eclipse/", velg alt under "Developer Tools", denne kan ta litt tid så vær tolmodig og den spør muligens om du godkjenner uaotirsert plugins etc.
 * 4. Git  
 	- http://code.google.com/p/msysgit/downloads/detail?name=Git-1.7.9-preview20120201.exe&can=3&q=
 	- Proxy hvis nødvendig, Windows set https_proxy=http://ip:port eller unix export https_proxy=http://ip:port
