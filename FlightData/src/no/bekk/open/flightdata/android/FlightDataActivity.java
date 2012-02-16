@@ -18,13 +18,12 @@ public class FlightDataActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        currentAirportName = getIntent().getExtras().getString(SELECTED_AIRPORT_NAME);
-        currentAirportIata = getIntent().getExtras().getString(SELECTED_AIRPORT_IATA);
+        currentAirportName = "";/* OPG3 */
+        currentAirportIata = "";/* OPG3 */
         
         ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        getActionBar().setTitle(currentAirportName);
-        getActionBar().setDisplayShowTitleEnabled(true);
+        /* OPG3 set name */
         addActionBarTabs(actionBar);
         
     }

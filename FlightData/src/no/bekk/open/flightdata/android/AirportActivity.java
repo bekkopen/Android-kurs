@@ -37,7 +37,7 @@ public class AirportActivity extends ListActivity implements AsyncTaskDelegate<A
 		Intent airportIntent = new Intent(this, FlightDataActivity.class);
 		airportIntent.putExtra(FlightDataActivity.SELECTED_AIRPORT_NAME, airportList.get(position).getAirportName());
 		airportIntent.putExtra(FlightDataActivity.SELECTED_AIRPORT_IATA, airportList.get(position).getAirportIata());
-		startActivity(airportIntent);
+		/* OPG3 */
 	}
 
 	@Override
