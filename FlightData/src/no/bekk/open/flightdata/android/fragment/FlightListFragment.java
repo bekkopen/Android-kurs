@@ -49,11 +49,8 @@ public class FlightListFragment extends Fragment implements AsyncTaskDelegate<Fl
 	public void publishItem(Flight flight) {
 		LayoutInflater inflater = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		TableRow tableRow = (TableRow)inflater.inflate(R.layout.flight_row, null);
-		TextView city = (TextView)tableRow.findViewById(R.id.flight_row_city);
-		TextView dateTime = (TextView)tableRow.findViewById(R.id.flight_row_date_time);
-		city.setText(flight.getCity());
-		dateTime.setText(flight.getDateTime());
-		flightTable.addView(tableRow);
+		TextView city = null;/* OPG 4 */
+		//flightTable.addView(tableRow);
 	}
 
 	@Override

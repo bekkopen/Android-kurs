@@ -48,7 +48,7 @@ public class GetFlightsDataTask extends AsyncTask<String, Flight, Void>{
 		reader.beginArray();
 		while (reader.hasNext()) {
 			Flight flight = readFlightObject(reader);
-			publishProgress(flight);
+			//publ.... OPG4
 		}
 		reader.endArray();
 	}
