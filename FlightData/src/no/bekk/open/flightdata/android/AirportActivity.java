@@ -24,8 +24,7 @@ public class AirportActivity extends ListActivity implements AsyncTaskDelegate<A
 		setContentView(R.layout.airport_activity);
 		airportList = new ArrayList<Airport>();
 		
-		GetAirportsDataTask getAirports = new GetAirportsDataTask(this);
-		getAirports.execute();
+		GetAirportsDataTask getAirports = null;/* OPG2 */
 		
 		airportListAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1);
 		setListAdapter(airportListAdapter);

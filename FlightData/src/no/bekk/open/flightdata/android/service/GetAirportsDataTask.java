@@ -44,7 +44,7 @@ public class GetAirportsDataTask extends AsyncTask<Void, Airport, Void>{
 		reader.beginArray();
 		while (reader.hasNext()) {
 			Airport airport = readAirportObject(reader);
-			publishProgress(airport);
+			/* OPG2 varsle activity med airport objekt */
 		}
 		reader.endArray();
 	}
