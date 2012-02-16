@@ -2,17 +2,16 @@ Oppgaver
 
 
 Oppgave #1
-
-- Switch til oppgavebranch: git checkout oppgave_fasit_skallapp
 - Importer prosjektet i Eclipse
+* git checkout opg_start
 
 Oppgave #2
-- Lag en activity som lister ut alle flyplasser fra airports-fila 
-* Fasit: git checkout oppgave_fasit_lufthavnsliste
+- Få AirportActivity til å liste ut alle flyplasser fra airports-fila i assets-mappa
+* Fasit: git checkout opg_fasit_lufthavnsliste
 
 Oppgave #3
-Legg til en ny activity som starter opp når du velger en flyplass. Activitien skal indikere hvilken flyplass du er på.
-* Fasit: git checkout oppgave_fasit_nyactivity
+Start activity med navn FlightDataActivity og få den til å vise hvilken flyplass du er på.
+* Fasit: git checkout opg_fasit_nyactivity
 
 Oppgave #4
 Last flytider fra API:
