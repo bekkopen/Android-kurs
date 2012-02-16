@@ -21,12 +21,7 @@ public class GetFlightsDataTask extends AsyncTask<String, Flight, Void>{
 
 	@Override
 	protected Void doInBackground(String... params) {
-		/*String JSONData = "[ {\"city\" : \"Oslo\", \"time\" : \"20:45\" }" +
-				", { \"city\" : \"Bergen\", \"time\" : \"20:45\" }" +
-				", { \"city\" : \"Bod¿\", \"time\" : \"20:45\" } ]";*/
-		
 		String url = String.format("http://mashapp.heroku.com/%S/%S", params[0], params[1]);
-		Log.w("URL", url);
 		InputStreamReader urlReader = null;
 		JsonReader reader = null;
 		try {
@@ -44,8 +39,8 @@ public class GetFlightsDataTask extends AsyncTask<String, Flight, Void>{
 	}
 	
 	private InputStreamReader getInputStreamReaderFromUrl(String url) throws IOException, URISyntaxException {
-		URL oracle = new URL(url);
-		URLConnection yc = oracle.openConnection();
+		URL serviceUrl = new URL(url);
+		URLConnection yc = serviceUrl.openConnection();
 		return new InputStreamReader(yc.getInputStream());
 	}
 	
