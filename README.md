@@ -16,6 +16,7 @@ Instruksjoner
 	- http://code.google.com/p/msysgit/downloads/detail?name=Git-1.7.9-preview20120201.exe&can=3&q=
 	- Proxy hvis nødvendig, Windows set https_proxy=http://ip:port eller unix export https_proxy=http://ip:port
 	- Prøv å klone fra "https://github.com/bekkopen/Android-kurs": git clone "https://github.com/bekkopen/Android-kurs"
+	- For å bytte mellom branch bruk: git checkout branch-navn
 
 Troubleshooting
 ----
