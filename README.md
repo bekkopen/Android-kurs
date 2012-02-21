@@ -1,4 +1,4 @@
-Android-kurs
+Oppsett av miljø for Android-kurs
 =========================
 
 Instruksjoner
@@ -22,5 +22,7 @@ Troubleshooting
 ----
 * Får ikke kompilert koden pga bruk av @Override av metoder fra Interfaces
 	- Påse at eclipse benytter Java1.6 til kompilering: høyreklikk project -> Properties -> Java Compiler -> Compiler compliance level -> 1.6
+* Feil ved installasjon av Android Development Toolkit
+* 	- prøv å kjøre Eclipse som Administrator hvis Windows 7
 * Feilmelding når man laster ned API-15 ved skriving til c:\program... i windows, 
-	- prøv å kjør som Administrator i windows7 
+	- prøv å kjør som Administrator i Windows7 
