@@ -4,7 +4,7 @@ Oppsett av miljø for Android-kurs
 ----
 * 1. Eclipse
 	- Eclipse Classic: http://www.eclipse.org/downloads/
- 	- Husk evt proxy-settings hvis nødvendig: eclipse-proxy (eclipse preferences, søt etter proxy)
+ 	- Husk evt proxy-settings hvis nødvendig: eclipse-proxy (eclipse preferences, søk etter proxy)
 * 2. Android SDK
 	- http://developer.android.com/sdk/index.html
 	- Start SDK manager, huk av for Android SDK Tools, Android SDK Plattform-tools og Android 4.0.3 (API15) og velg "Install packages". MERK Proxy-settings hvis nødvendig: SDK-manager, tools-options
