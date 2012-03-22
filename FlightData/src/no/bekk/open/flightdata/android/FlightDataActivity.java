@@ -30,7 +30,7 @@ public class FlightDataActivity extends Activity {
     
     private void addActionBarTabs(ActionBar actionBar) {
     	Tab tab = actionBar.newTab()
-        		.setText("Arrivaal")
+        		.setText("Arrival")
         		.setTabListener(new TabListener<FlightListFragment>(this, "A", FlightListFragment.class));
         actionBar.addTab(tab);
         
