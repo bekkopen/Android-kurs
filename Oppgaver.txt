@@ -15,7 +15,7 @@ Start activity med navn FlightDataActivity og få den til å vise hvilken flypla
 
 Oppgave #4
 Last flytider fra API:
-* Fasit: git checkout oppgave_fasit_flytider
+* Fasit: git checkout opg_fasit_flytider
 
 Bonusoppgave #5
 Last værdata fra yr eller
